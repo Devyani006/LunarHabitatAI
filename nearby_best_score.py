@@ -1,3 +1,4 @@
+#nearby_best_score.py
 import json
 import numpy as np
 
@@ -13,7 +14,7 @@ named_sites = data["named_sites"]
 shape = final_score.shape  # (400, 400)
 RADIUS_KM = 5  # search a 5km box around each site's center cell (grid is 1km/cell)
 
-print("--- Center score vs. best nearby score (5km search radius) ---\n")
+print("--- Exact coordinate score vs. best nearby score (5km search radius) ---\n")
 
 for name, site in named_sites.items():
     if "row" not in site:
@@ -32,18 +33,18 @@ for name, site in named_sites.items():
         # only consider cells that pass the flatness gate
         masked = np.where(window_flat, window_score, -1)
         best_idx_flat = np.unravel_index(np.argmax(masked), masked.shape)
-        best_score = masked[best_idx_flat]
+        best_score = round(float(masked[best_idx_flat]), 1)
         best_row_offset = (best_idx_flat[0] + r_lo) - r
         best_col_offset = (best_idx_flat[1] + c_lo) - c
 
-        site["best_nearby_score"] = float(best_score)
-        site["best_nearby_offset_km"] = [int(best_row_offset), int(best_col_offset)]
+        site["best_score_within_5km"] = best_score
+        site["best_offset_km_from_exact_coordinate"] = [int(best_row_offset), int(best_col_offset)]
 
         print(f"{name}:")
-        print(f"  center score = {site['landing_suitability_score']:.1f} (is_flat={site['is_flat']})")
-        print(f"  best nearby  = {best_score:.1f}  (offset {best_row_offset}km row, {best_col_offset}km col from center)")
+        print(f"  score at exact coordinate = {site['score_at_exact_coordinate']:.1f} (is_flat={site['is_flat']})")
+        print(f"  best nearby               = {best_score:.1f}  (offset {best_row_offset}km row, {best_col_offset}km col from exact coordinate)")
     else:
-        site["best_nearby_score"] = None
+        site["best_score_within_5km"] = None
         print(f"{name}: NO flat cells found within {RADIUS_KM}km — this site's whole neighborhood is steep. Flag this in your writeup, don't just drop it.")
     print()
 
@@ -52,4 +53,4 @@ data["named_sites"] = named_sites
 with open(path, "w", encoding="utf-8") as f:
     json.dump(data, f)
 
-print(f"Updated {path} with best_nearby_score for each site.")
+print(f"Updated {path} with best_score_within_5km for each site.")
