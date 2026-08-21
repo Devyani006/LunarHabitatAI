@@ -70,12 +70,33 @@ def run_xai_pipeline():
     banner("Assembling HTML Report")
     report_path = save_html_report(l1, l2, l3)
 
+    # --- GEMINI XAI (optional — gated by GEMINI_API_KEY) ---
+    # This section runs AFTER the existing deterministic pipeline.
+    # It has NO effect on l1, l2, l3, or the AHP ranking.
+    # If GEMINI_API_KEY is absent, this step is silently skipped.
+    gemini_report = None
+    gemini_key = os.environ.get("GEMINI_API_KEY", "").strip()
+    if gemini_key:
+        banner("GEMINI XAI — Natural-Language Explanation Layer")
+        try:
+            from xai.gemini.xai_gemini import run_gemini_xai
+            gemini_report = run_gemini_xai()
+        except Exception as _gemini_exc:
+            print(f"  [WARNING] Gemini XAI failed: {_gemini_exc}")
+            print("  Existing XAI report is unaffected.")
+    else:
+        print("\n  [INFO] GEMINI_API_KEY not set — Gemini XAI skipped.")
+        print("  Set GEMINI_API_KEY to enable natural-language explanations.")
+        print("  Existing deterministic XAI report is complete and unaffected.")
+
     elapsed = round(time.time() - t0, 1)
 
     banner("XAI PIPELINE COMPLETE")
     print(f"  Total time      : {elapsed}s")
     print(f"  HTML report     : {report_path}")
     print(f"  All XAI outputs : {XAI_OUT}")
+    if gemini_report:
+        print(f"  Gemini outputs  : {os.path.join(os.path.dirname(__file__), 'gemini', 'outputs')}")
     print()
     print("  Open in browser:")
     print(f"  start {report_path}")
@@ -86,3 +107,4 @@ def run_xai_pipeline():
 
 if __name__ == "__main__":
     run_xai_pipeline()
+

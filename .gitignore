@@ -1,3 +1,17 @@
+# ==========================================================================
+# LunarHabitatAI — Project-specific ignores
+# ==========================================================================
+
+# API keys and secrets — NEVER commit these
+.env
+.env.local
+.env.*
+!.env.example
+
+# XAI Gemini outputs (may contain API responses — keep local only)
+xai/gemini/outputs/
+
+# ==========================================================================
 # Logs
 logs
 *.log
