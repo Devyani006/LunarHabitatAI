@@ -1,44 +1,110 @@
 CLUSTER DELTA REPORT — Lunar Habitat Site Selector
 ============================================================
 
-Site: de Gerlache Rim
-Archetype: Shadow-Dominated Environment  (Cluster 1)
+Candidate Site: Shackleton Crater Rim
+Cluster: 1
+Archetype: Shadow-Dominated Environment
 
-  Elevation M: -1031.3m vs cluster mean -1830.9m (z=+0.60) — moderately above cluster average.
-  Slope Deg: 3.4deg vs cluster mean 8.5deg (z=-0.93) — moderately below cluster average.
-  Sunlight Score: 0.1% vs cluster mean 7.8% (z=-1.14) — notably below cluster average.
+Feature alignment table:
+Feature              |       Site | Cluster Mean |      Z | Alignment
+elevation_m          |   -2778.9m |     -1940.1m |  -0.63 | moderately below cluster average
+slope_deg            |     3.3deg |       8.4deg |  -0.91 | moderately below cluster average
+sunlight_score       |       0.0% |         6.8% |  -1.05 | notably below cluster average
+dust_risk_score      |        0.0 |          8.6 |  -1.19 | notably below cluster average
 
-Site: Nobile Rim
-Archetype: High-Elevation / High-Slope Environment  (Cluster 0)
+Strongest alignment:
+  elevation_m (z=-0.63)
+Weakest alignment:
+  dust_risk_score (z=-1.19)
+Environmental interpretation:
+  environmentally characteristic of this cluster, with identified limitation in dust_risk_score
 
-  Elevation M: 920.0m vs cluster mean 1217.4m (z=-0.14) — slightly below cluster average.
-  Slope Deg: 6.9deg vs cluster mean 14.7deg (z=-1.30) — notably below cluster average.
-  Sunlight Score: 35.7% vs cluster mean 30.8% (z=+0.42) — slightly above cluster average.
+Candidate Site: Nobile Rim
+Cluster: 0
+Archetype: High-Elevation / High-Slope Environment
 
-Site: Haworth Crater
-Archetype: Shadow-Dominated Environment  (Cluster 1)
+Feature alignment table:
+Feature              |       Site | Cluster Mean |      Z | Alignment
+elevation_m          |     920.0m |      1225.8m |  -0.15 | slightly below cluster average
+slope_deg            |     6.9deg |      15.0deg |  -1.38 | notably below cluster average
+sunlight_score       |      35.7% |        31.8% |  +0.34 | slightly above cluster average
+dust_risk_score      |        7.0 |         12.2 |  -0.62 | moderately below cluster average
 
-  Elevation M: -1620.8m vs cluster mean -1830.9m (z=+0.16) — slightly above cluster average.
-  Slope Deg: 12.2deg vs cluster mean 8.5deg (z=+0.68) — moderately above cluster average.
-  Sunlight Score: 0.0% vs cluster mean 7.8% (z=-1.15) — notably below cluster average.
+Strongest alignment:
+  elevation_m (z=-0.15)
+Weakest alignment:
+  slope_deg (z=-1.38)
+Environmental interpretation:
+  environmentally characteristic of this cluster, with identified limitation in slope_deg
 
-Site: Faustini Rim
-Archetype: Shadow-Dominated Environment  (Cluster 1)
+Candidate Site: Faustini Rim
+Cluster: 1
+Archetype: Shadow-Dominated Environment
 
-  Elevation M: -2635.8m vs cluster mean -1830.9m (z=-0.61) — moderately below cluster average.
-  Slope Deg: 21.4deg vs cluster mean 8.5deg (z=+2.36) — significantly (outlier) above cluster average. [OUTLIER > 2 standard deviations]
-  Sunlight Score: 0.0% vs cluster mean 7.8% (z=-1.15) — notably below cluster average.
+Feature alignment table:
+Feature              |       Site | Cluster Mean |      Z | Alignment
+elevation_m          |   -2635.8m |     -1940.1m |  -0.52 | moderately below cluster average
+slope_deg            |    21.4deg |       8.4deg |  +2.32 | significantly (outlier) above cluster average [OUTLIER]
+sunlight_score       |       0.0% |         6.8% |  -1.05 | notably below cluster average
+dust_risk_score      |        0.0 |          8.6 |  -1.19 | notably below cluster average
 
-Site: Shackleton Crater Rim
-Archetype: Shadow-Dominated Environment  (Cluster 1)
+Strongest alignment:
+  elevation_m (z=-0.52)
+Weakest alignment:
+  slope_deg (z=+2.32)
+Environmental interpretation:
+  environmentally characteristic of this cluster, with identified limitation in slope_deg
 
-  Elevation M: -2778.9m vs cluster mean -1830.9m (z=-0.71) — moderately below cluster average.
-  Slope Deg: 3.3deg vs cluster mean 8.5deg (z=-0.95) — moderately below cluster average.
-  Sunlight Score: 0.0% vs cluster mean 7.8% (z=-1.15) — notably below cluster average.
+Candidate Site: de Gerlache Rim
+Cluster: 1
+Archetype: Shadow-Dominated Environment
 
-Site: Malapert Massif
-Archetype: High-Elevation / High-Slope Environment  (Cluster 0)
+Feature alignment table:
+Feature              |       Site | Cluster Mean |      Z | Alignment
+elevation_m          |   -1031.3m |     -1940.1m |  +0.69 | moderately above cluster average
+slope_deg            |     3.4deg |       8.4deg |  -0.90 | moderately below cluster average
+sunlight_score       |       0.1% |         6.8% |  -1.03 | notably below cluster average
+dust_risk_score      |        0.5 |          8.6 |  -1.12 | notably below cluster average
 
-  Elevation M: 4910.9m vs cluster mean 1217.4m (z=+1.80) — notably above cluster average.
-  Slope Deg: 6.3deg vs cluster mean 14.7deg (z=-1.39) — notably below cluster average.
-  Sunlight Score: 46.7% vs cluster mean 30.8% (z=+1.37) — notably above cluster average.
+Strongest alignment:
+  elevation_m (z=+0.69)
+Weakest alignment:
+  dust_risk_score (z=-1.12)
+Environmental interpretation:
+  environmentally characteristic of this cluster, with identified limitation in dust_risk_score
+
+Candidate Site: Malapert Massif
+Cluster: 0
+Archetype: High-Elevation / High-Slope Environment
+
+Feature alignment table:
+Feature              |       Site | Cluster Mean |      Z | Alignment
+elevation_m          |    4910.9m |      1225.8m |  +1.79 | notably above cluster average
+slope_deg            |     6.3deg |      15.0deg |  -1.48 | notably below cluster average
+sunlight_score       |      46.7% |        31.8% |  +1.30 | notably above cluster average
+dust_risk_score      |       11.7 |         12.2 |  -0.06 | slightly below cluster average
+
+Strongest alignment:
+  dust_risk_score (z=-0.06)
+Weakest alignment:
+  elevation_m (z=+1.79)
+Environmental interpretation:
+  environmentally characteristic of this cluster, with identified limitation in elevation_m
+
+Candidate Site: Haworth Crater
+Cluster: 1
+Archetype: Shadow-Dominated Environment
+
+Feature alignment table:
+Feature              |       Site | Cluster Mean |      Z | Alignment
+elevation_m          |   -1620.8m |     -1940.1m |  +0.24 | slightly above cluster average
+slope_deg            |    12.2deg |       8.4deg |  +0.67 | moderately above cluster average
+sunlight_score       |       0.0% |         6.8% |  -1.05 | notably below cluster average
+dust_risk_score      |        0.2 |          8.6 |  -1.16 | notably below cluster average
+
+Strongest alignment:
+  elevation_m (z=+0.24)
+Weakest alignment:
+  dust_risk_score (z=-1.16)
+Environmental interpretation:
+  environmentally characteristic of this cluster, with identified limitation in dust_risk_score

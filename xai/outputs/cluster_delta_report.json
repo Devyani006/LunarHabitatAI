@@ -1,56 +1,206 @@
 {
-  "de Gerlache Rim": {
+  "Shackleton Crater Rim": {
     "archetype": "Shadow-Dominated Environment",
     "cluster_id": 1,
-    "narratives": [
-      "Elevation M: -1031.3m vs cluster mean -1830.9m (z=+0.60) \u2014 moderately above cluster average.",
-      "Slope Deg: 3.4deg vs cluster mean 8.5deg (z=-0.93) \u2014 moderately below cluster average.",
-      "Sunlight Score: 0.1% vs cluster mean 7.8% (z=-1.14) \u2014 notably below cluster average."
+    "table_data": [
+      {
+        "feature": "elevation_m",
+        "site_val": "-2778.9m",
+        "cluster_mean": "-1940.1m",
+        "z": -0.632,
+        "alignment": "moderately below cluster average"
+      },
+      {
+        "feature": "slope_deg",
+        "site_val": "3.3deg",
+        "cluster_mean": "8.4deg",
+        "z": -0.913,
+        "alignment": "moderately below cluster average"
+      },
+      {
+        "feature": "sunlight_score",
+        "site_val": "0.0%",
+        "cluster_mean": "6.8%",
+        "z": -1.047,
+        "alignment": "notably below cluster average"
+      },
+      {
+        "feature": "dust_risk_score",
+        "site_val": "0.0",
+        "cluster_mean": "8.6",
+        "z": -1.189,
+        "alignment": "notably below cluster average"
+      }
     ]
   },
   "Nobile Rim": {
     "archetype": "High-Elevation / High-Slope Environment",
     "cluster_id": 0,
-    "narratives": [
-      "Elevation M: 920.0m vs cluster mean 1217.4m (z=-0.14) \u2014 slightly below cluster average.",
-      "Slope Deg: 6.9deg vs cluster mean 14.7deg (z=-1.30) \u2014 notably below cluster average.",
-      "Sunlight Score: 35.7% vs cluster mean 30.8% (z=+0.42) \u2014 slightly above cluster average."
-    ]
-  },
-  "Haworth Crater": {
-    "archetype": "Shadow-Dominated Environment",
-    "cluster_id": 1,
-    "narratives": [
-      "Elevation M: -1620.8m vs cluster mean -1830.9m (z=+0.16) \u2014 slightly above cluster average.",
-      "Slope Deg: 12.2deg vs cluster mean 8.5deg (z=+0.68) \u2014 moderately above cluster average.",
-      "Sunlight Score: 0.0% vs cluster mean 7.8% (z=-1.15) \u2014 notably below cluster average."
+    "table_data": [
+      {
+        "feature": "elevation_m",
+        "site_val": "920.0m",
+        "cluster_mean": "1225.8m",
+        "z": -0.149,
+        "alignment": "slightly below cluster average"
+      },
+      {
+        "feature": "sunlight_score",
+        "site_val": "35.7%",
+        "cluster_mean": "31.8%",
+        "z": 0.344,
+        "alignment": "slightly above cluster average"
+      },
+      {
+        "feature": "dust_risk_score",
+        "site_val": "7.0",
+        "cluster_mean": "12.2",
+        "z": -0.624,
+        "alignment": "moderately below cluster average"
+      },
+      {
+        "feature": "slope_deg",
+        "site_val": "6.9deg",
+        "cluster_mean": "15.0deg",
+        "z": -1.384,
+        "alignment": "notably below cluster average"
+      }
     ]
   },
   "Faustini Rim": {
     "archetype": "Shadow-Dominated Environment",
     "cluster_id": 1,
-    "narratives": [
-      "Elevation M: -2635.8m vs cluster mean -1830.9m (z=-0.61) \u2014 moderately below cluster average.",
-      "Slope Deg: 21.4deg vs cluster mean 8.5deg (z=+2.36) \u2014 significantly (outlier) above cluster average. [OUTLIER > 2 standard deviations]",
-      "Sunlight Score: 0.0% vs cluster mean 7.8% (z=-1.15) \u2014 notably below cluster average."
+    "table_data": [
+      {
+        "feature": "elevation_m",
+        "site_val": "-2635.8m",
+        "cluster_mean": "-1940.1m",
+        "z": -0.524,
+        "alignment": "moderately below cluster average"
+      },
+      {
+        "feature": "sunlight_score",
+        "site_val": "0.0%",
+        "cluster_mean": "6.8%",
+        "z": -1.047,
+        "alignment": "notably below cluster average"
+      },
+      {
+        "feature": "dust_risk_score",
+        "site_val": "0.0",
+        "cluster_mean": "8.6",
+        "z": -1.189,
+        "alignment": "notably below cluster average"
+      },
+      {
+        "feature": "slope_deg",
+        "site_val": "21.4deg",
+        "cluster_mean": "8.4deg",
+        "z": 2.316,
+        "alignment": "significantly (outlier) above cluster average [OUTLIER]"
+      }
     ]
   },
-  "Shackleton Crater Rim": {
+  "de Gerlache Rim": {
     "archetype": "Shadow-Dominated Environment",
     "cluster_id": 1,
-    "narratives": [
-      "Elevation M: -2778.9m vs cluster mean -1830.9m (z=-0.71) \u2014 moderately below cluster average.",
-      "Slope Deg: 3.3deg vs cluster mean 8.5deg (z=-0.95) \u2014 moderately below cluster average.",
-      "Sunlight Score: 0.0% vs cluster mean 7.8% (z=-1.15) \u2014 notably below cluster average."
+    "table_data": [
+      {
+        "feature": "elevation_m",
+        "site_val": "-1031.3m",
+        "cluster_mean": "-1940.1m",
+        "z": 0.685,
+        "alignment": "moderately above cluster average"
+      },
+      {
+        "feature": "slope_deg",
+        "site_val": "3.4deg",
+        "cluster_mean": "8.4deg",
+        "z": -0.895,
+        "alignment": "moderately below cluster average"
+      },
+      {
+        "feature": "sunlight_score",
+        "site_val": "0.1%",
+        "cluster_mean": "6.8%",
+        "z": -1.035,
+        "alignment": "notably below cluster average"
+      },
+      {
+        "feature": "dust_risk_score",
+        "site_val": "0.5",
+        "cluster_mean": "8.6",
+        "z": -1.123,
+        "alignment": "notably below cluster average"
+      }
     ]
   },
   "Malapert Massif": {
     "archetype": "High-Elevation / High-Slope Environment",
     "cluster_id": 0,
-    "narratives": [
-      "Elevation M: 4910.9m vs cluster mean 1217.4m (z=+1.80) \u2014 notably above cluster average.",
-      "Slope Deg: 6.3deg vs cluster mean 14.7deg (z=-1.39) \u2014 notably below cluster average.",
-      "Sunlight Score: 46.7% vs cluster mean 30.8% (z=+1.37) \u2014 notably above cluster average."
+    "table_data": [
+      {
+        "feature": "dust_risk_score",
+        "site_val": "11.7",
+        "cluster_mean": "12.2",
+        "z": -0.064,
+        "alignment": "slightly below cluster average"
+      },
+      {
+        "feature": "sunlight_score",
+        "site_val": "46.7%",
+        "cluster_mean": "31.8%",
+        "z": 1.302,
+        "alignment": "notably above cluster average"
+      },
+      {
+        "feature": "slope_deg",
+        "site_val": "6.3deg",
+        "cluster_mean": "15.0deg",
+        "z": -1.477,
+        "alignment": "notably below cluster average"
+      },
+      {
+        "feature": "elevation_m",
+        "site_val": "4910.9m",
+        "cluster_mean": "1225.8m",
+        "z": 1.795,
+        "alignment": "notably above cluster average"
+      }
+    ]
+  },
+  "Haworth Crater": {
+    "archetype": "Shadow-Dominated Environment",
+    "cluster_id": 1,
+    "table_data": [
+      {
+        "feature": "elevation_m",
+        "site_val": "-1620.8m",
+        "cluster_mean": "-1940.1m",
+        "z": 0.241,
+        "alignment": "slightly above cluster average"
+      },
+      {
+        "feature": "slope_deg",
+        "site_val": "12.2deg",
+        "cluster_mean": "8.4deg",
+        "z": 0.674,
+        "alignment": "moderately above cluster average"
+      },
+      {
+        "feature": "sunlight_score",
+        "site_val": "0.0%",
+        "cluster_mean": "6.8%",
+        "z": -1.047,
+        "alignment": "notably below cluster average"
+      },
+      {
+        "feature": "dust_risk_score",
+        "site_val": "0.2",
+        "cluster_mean": "8.6",
+        "z": -1.158,
+        "alignment": "notably below cluster average"
+      }
     ]
   }
 }

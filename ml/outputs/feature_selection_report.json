@@ -2,12 +2,12 @@
   "selected_features": [
     "elevation_m",
     "slope_deg",
-    "sunlight_score"
+    "sunlight_score",
+    "dust_risk_score"
   ],
   "excluded_features": [
     "roughness_m",
     "ice_score",
-    "dust_risk_score",
     "crater_hazard_raw",
     "landing_suitability_raw",
     "terrain_flatness_raw"

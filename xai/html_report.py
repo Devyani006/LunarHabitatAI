@@ -269,12 +269,39 @@ def build_html_report(l1: dict, l2: dict, l3: dict) -> str:
         else:
             cf_text = "<p class='muted'>No single-feature change moves this site to a different cluster.</p>"
 
-        # Delta report sentences
+        # Delta report table
         delta_entry = delta_report.get(site_name, {})
-        delta_sentences = delta_entry.get("narratives", [])
-        if delta_sentences:
-            delta_text = "".join(f"<li>{s}</li>" for s in delta_sentences)
-            delta_text = f"<ul class='delta-list'>{delta_text}</ul>"
+        delta_table_data = delta_entry.get("table_data", [])
+        if delta_table_data:
+            delta_rows = ""
+            for row in delta_table_data:
+                delta_rows += f"""
+                <tr>
+                  <td>{row['feature']}</td>
+                  <td>{row['site_val']}</td>
+                  <td>{row['cluster_mean']}</td>
+                  <td>{row['z']:+.2f}</td>
+                  <td>{row['alignment']}</td>
+                </tr>"""
+            delta_text = f"""
+            <table class="factor-table" style="margin-top: 10px;">
+              <thead><tr><th>Feature</th><th>Site</th><th>Cluster Mean</th><th>Z</th><th>Alignment</th></tr></thead>
+              <tbody>{delta_rows}</tbody>
+            </table>
+            """
+            
+            delta_table_data.sort(key=lambda x: abs(x["z"]))
+            strongest = delta_table_data[0]
+            weakest = delta_table_data[-1]
+            delta_text += f"<p class='muted' style='margin-top:10px'><strong>Strongest alignment:</strong> {strongest['feature']} (z={strongest['z']:+.2f})</p>"
+            delta_text += f"<p class='muted'><strong>Weakest alignment:</strong> {weakest['feature']} (z={weakest['z']:+.2f})</p>"
+            
+            interpretation = "environmentally characteristic of this cluster"
+            if abs(weakest["z"]) >= 1.0:
+                interpretation += f", with identified limitation in {weakest['feature']}"
+            delta_text += f"<p class='muted'><strong>Interpretation:</strong> {interpretation}</p>"
+        else:
+            delta_text = "<p class='muted'>No feature data available.</p>"
 
         # Factor contributions table
         fw    = bd.get("factor_contributions", {})

@@ -50,8 +50,9 @@ FEATURE_COLUMNS = [
     "elevation_m",     # Raw measurement -- DEM-derived, meters
     "slope_deg",       # Derived physical -- terrain gradient
     "sunlight_score",  # Normalized score -- % illumination time
+    "dust_risk_score", # Validated environmental variable
     # roughness_m DROPPED: r=0.989 with slope_deg -- redundant
-    # ice_score   DROPPED: r=-0.999 with sunlight_score -- perfect anti-correlation
+    # ice_score   DROPPED: r=-0.999 with sunlight_score -- perfect anti-correlation (omitted to avoid double-counting)
     # --- Future radiation features (do NOT uncomment until validated) ---
     # "radiation_dose_msv_day",
     # "shielding_depth_gcm2",

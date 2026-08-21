@@ -1,38 +1,42 @@
 {
-  "de Gerlache Rim": {
-    "site": "de Gerlache Rim",
-    "lat": -88.5,
-    "lon": -87.1,
-    "grid_row": 197,
-    "grid_col": 154,
+  "Shackleton Crater Rim": {
+    "site": "Shackleton Crater Rim",
+    "lat": -89.67,
+    "lon": 129.78,
+    "grid_row": 206,
+    "grid_col": 207,
     "cluster_id": 1,
     "archetype_label": "Shadow-Dominated Environment",
-    "pct_of_region": 33.66,
+    "pct_of_region": 27.74,
     "site_feature_values": {
-      "elevation_m": -1031.250732421875,
-      "slope_deg": 3.3815622329711914,
-      "sunlight_score": 0.0756480023264885
+      "elevation_m": -2778.916259765625,
+      "slope_deg": 3.2785239219665527,
+      "sunlight_score": 0.0,
+      "dust_risk_score": 0.0
     },
     "cluster_mean": {
-      "elevation_m": -1830.911,
-      "slope_deg": 8.486,
-      "sunlight_score": 7.751
+      "elevation_m": -1940.114,
+      "slope_deg": 8.413,
+      "sunlight_score": 6.796,
+      "dust_risk_score": 8.572
     },
     "z_within_cluster": {
-      "elevation_m": 0.602,
-      "slope_deg": -0.929,
-      "sunlight_score": -1.137
+      "elevation_m": -0.632,
+      "slope_deg": -0.913,
+      "sunlight_score": -1.047,
+      "dust_risk_score": -1.189
     },
     "outlier_flags": {
       "elevation_m": false,
       "slope_deg": false,
-      "sunlight_score": false
+      "sunlight_score": false,
+      "dust_risk_score": false
     },
     "is_anomaly": false,
-    "confidence": "medium (crater center used as rim proxy)",
+    "confidence": "high",
     "strengths": [],
     "limitations": [
-      "Comparatively low solar illumination (7.8)"
+      "Comparatively low solar illumination (6.8)"
     ]
   },
   "Nobile Rim": {
@@ -43,70 +47,39 @@
     "grid_col": 314,
     "cluster_id": 0,
     "archetype_label": "High-Elevation / High-Slope Environment",
-    "pct_of_region": 19.28,
+    "pct_of_region": 16.86,
     "site_feature_values": {
       "elevation_m": 919.9817504882812,
       "slope_deg": 6.8785576820373535,
-      "sunlight_score": 35.711978912353516
+      "sunlight_score": 35.711978912353516,
+      "dust_risk_score": 6.959285736083984
     },
     "cluster_mean": {
-      "elevation_m": 1217.404,
-      "slope_deg": 14.701,
-      "sunlight_score": 30.822
+      "elevation_m": 1225.782,
+      "slope_deg": 15.031,
+      "sunlight_score": 31.776,
+      "dust_risk_score": 12.195
     },
     "z_within_cluster": {
-      "elevation_m": -0.145,
-      "slope_deg": -1.303,
-      "sunlight_score": 0.423
+      "elevation_m": -0.149,
+      "slope_deg": -1.384,
+      "sunlight_score": 0.344,
+      "dust_risk_score": -0.624
     },
     "outlier_flags": {
       "elevation_m": false,
       "slope_deg": false,
-      "sunlight_score": false
+      "sunlight_score": false,
+      "dust_risk_score": false
     },
     "is_anomaly": false,
     "confidence": "medium (crater center used as rim proxy)",
     "strengths": [
-      "Higher elevation may improve comms/sightlines (1217 m)"
+      "Higher elevation may improve comms/sightlines (1226 m)",
+      "Comparatively high solar illumination (31.8)"
     ],
     "limitations": [
-      "Elevated slope (14.7deg) may affect construction"
-    ]
-  },
-  "Haworth Crater": {
-    "site": "Haworth Crater",
-    "lat": -86.9,
-    "lon": -4.0,
-    "grid_row": 106,
-    "grid_col": 193,
-    "cluster_id": 1,
-    "archetype_label": "Shadow-Dominated Environment",
-    "pct_of_region": 33.66,
-    "site_feature_values": {
-      "elevation_m": -1620.8123779296875,
-      "slope_deg": 12.20356273651123,
-      "sunlight_score": 0.0
-    },
-    "cluster_mean": {
-      "elevation_m": -1830.911,
-      "slope_deg": 8.486,
-      "sunlight_score": 7.751
-    },
-    "z_within_cluster": {
-      "elevation_m": 0.158,
-      "slope_deg": 0.676,
-      "sunlight_score": -1.148
-    },
-    "outlier_flags": {
-      "elevation_m": false,
-      "slope_deg": false,
-      "sunlight_score": false
-    },
-    "is_anomaly": false,
-    "confidence": "high",
-    "strengths": [],
-    "limitations": [
-      "Comparatively low solar illumination (7.8)"
+      "Elevated slope (15.0deg) may affect construction"
     ]
   },
   "Faustini Rim": {
@@ -117,68 +90,76 @@
     "grid_col": 279,
     "cluster_id": 1,
     "archetype_label": "Shadow-Dominated Environment",
-    "pct_of_region": 33.66,
+    "pct_of_region": 27.74,
     "site_feature_values": {
       "elevation_m": -2635.844970703125,
       "slope_deg": 21.436145782470703,
-      "sunlight_score": 0.0
+      "sunlight_score": 0.0,
+      "dust_risk_score": 0.0
     },
     "cluster_mean": {
-      "elevation_m": -1830.911,
-      "slope_deg": 8.486,
-      "sunlight_score": 7.751
+      "elevation_m": -1940.114,
+      "slope_deg": 8.413,
+      "sunlight_score": 6.796,
+      "dust_risk_score": 8.572
     },
     "z_within_cluster": {
-      "elevation_m": -0.606,
-      "slope_deg": 2.356,
-      "sunlight_score": -1.148
+      "elevation_m": -0.524,
+      "slope_deg": 2.316,
+      "sunlight_score": -1.047,
+      "dust_risk_score": -1.189
     },
     "outlier_flags": {
       "elevation_m": false,
       "slope_deg": true,
-      "sunlight_score": false
+      "sunlight_score": false,
+      "dust_risk_score": false
     },
     "is_anomaly": false,
     "confidence": "medium (two published coordinate sets disagree by ~7\u00b0 lon)",
     "strengths": [],
     "limitations": [
-      "Comparatively low solar illumination (7.8)"
+      "Comparatively low solar illumination (6.8)"
     ]
   },
-  "Shackleton Crater Rim": {
-    "site": "Shackleton Crater Rim",
-    "lat": -89.67,
-    "lon": 129.78,
-    "grid_row": 206,
-    "grid_col": 207,
+  "de Gerlache Rim": {
+    "site": "de Gerlache Rim",
+    "lat": -88.5,
+    "lon": -87.1,
+    "grid_row": 197,
+    "grid_col": 154,
     "cluster_id": 1,
     "archetype_label": "Shadow-Dominated Environment",
-    "pct_of_region": 33.66,
+    "pct_of_region": 27.74,
     "site_feature_values": {
-      "elevation_m": -2778.916259765625,
-      "slope_deg": 3.2785239219665527,
-      "sunlight_score": 0.0
+      "elevation_m": -1031.250732421875,
+      "slope_deg": 3.3815622329711914,
+      "sunlight_score": 0.0756480023264885,
+      "dust_risk_score": 0.48009544610977173
     },
     "cluster_mean": {
-      "elevation_m": -1830.911,
-      "slope_deg": 8.486,
-      "sunlight_score": 7.751
+      "elevation_m": -1940.114,
+      "slope_deg": 8.413,
+      "sunlight_score": 6.796,
+      "dust_risk_score": 8.572
     },
     "z_within_cluster": {
-      "elevation_m": -0.714,
-      "slope_deg": -0.948,
-      "sunlight_score": -1.148
+      "elevation_m": 0.685,
+      "slope_deg": -0.895,
+      "sunlight_score": -1.035,
+      "dust_risk_score": -1.123
     },
     "outlier_flags": {
       "elevation_m": false,
       "slope_deg": false,
-      "sunlight_score": false
+      "sunlight_score": false,
+      "dust_risk_score": false
     },
     "is_anomaly": false,
-    "confidence": "high",
+    "confidence": "medium (crater center used as rim proxy)",
     "strengths": [],
     "limitations": [
-      "Comparatively low solar illumination (7.8)"
+      "Comparatively low solar illumination (6.8)"
     ]
   },
   "Malapert Massif": {
@@ -189,34 +170,79 @@
     "grid_col": 195,
     "cluster_id": 0,
     "archetype_label": "High-Elevation / High-Slope Environment",
-    "pct_of_region": 19.28,
+    "pct_of_region": 16.86,
     "site_feature_values": {
       "elevation_m": 4910.8525390625,
       "slope_deg": 6.330286026000977,
-      "sunlight_score": 46.6923828125
+      "sunlight_score": 46.6923828125,
+      "dust_risk_score": 11.655573844909668
     },
     "cluster_mean": {
-      "elevation_m": 1217.404,
-      "slope_deg": 14.701,
-      "sunlight_score": 30.822
+      "elevation_m": 1225.782,
+      "slope_deg": 15.031,
+      "sunlight_score": 31.776,
+      "dust_risk_score": 12.195
     },
     "z_within_cluster": {
-      "elevation_m": 1.801,
-      "slope_deg": -1.394,
-      "sunlight_score": 1.372
+      "elevation_m": 1.795,
+      "slope_deg": -1.477,
+      "sunlight_score": 1.302,
+      "dust_risk_score": -0.064
     },
     "outlier_flags": {
       "elevation_m": false,
       "slope_deg": false,
-      "sunlight_score": false
+      "sunlight_score": false,
+      "dust_risk_score": false
     },
-    "is_anomaly": true,
+    "is_anomaly": false,
     "confidence": "high (NASA Artemis III-specified landing site, per NASA 2023a/2023b; not a crater-center proxy)",
     "strengths": [
-      "Higher elevation may improve comms/sightlines (1217 m)"
+      "Higher elevation may improve comms/sightlines (1226 m)",
+      "Comparatively high solar illumination (31.8)"
     ],
     "limitations": [
-      "Elevated slope (14.7deg) may affect construction"
+      "Elevated slope (15.0deg) may affect construction"
+    ]
+  },
+  "Haworth Crater": {
+    "site": "Haworth Crater",
+    "lat": -86.9,
+    "lon": -4.0,
+    "grid_row": 106,
+    "grid_col": 193,
+    "cluster_id": 1,
+    "archetype_label": "Shadow-Dominated Environment",
+    "pct_of_region": 27.74,
+    "site_feature_values": {
+      "elevation_m": -1620.8123779296875,
+      "slope_deg": 12.20356273651123,
+      "sunlight_score": 0.0,
+      "dust_risk_score": 0.22399763762950897
+    },
+    "cluster_mean": {
+      "elevation_m": -1940.114,
+      "slope_deg": 8.413,
+      "sunlight_score": 6.796,
+      "dust_risk_score": 8.572
+    },
+    "z_within_cluster": {
+      "elevation_m": 0.241,
+      "slope_deg": 0.674,
+      "sunlight_score": -1.047,
+      "dust_risk_score": -1.158
+    },
+    "outlier_flags": {
+      "elevation_m": false,
+      "slope_deg": false,
+      "sunlight_score": false,
+      "dust_risk_score": false
+    },
+    "is_anomaly": false,
+    "confidence": "high",
+    "strengths": [],
+    "limitations": [
+      "Comparatively low solar illumination (6.8)"
     ]
   }
 }

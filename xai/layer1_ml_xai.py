@@ -85,7 +85,7 @@ def run_shap_explanation(X_scaled: np.ndarray, labels: np.ndarray,
     shap_importance = {feature_names[i]: round(float(mean_abs[i]), 5)
                        for i in range(len(feature_names))}
 
-    print("[xai-L1] SHAP feature importance:")
+    print("\n[xai-L1] --- Supplementary Diagnostic: SHAP Feature Importance ---")
     for feat, val in sorted(shap_importance.items(), key=lambda x: -x[1]):
         bar = "#" * int(val / max(mean_abs) * 30)
         print(f"  {feat:<20} {bar} {val:.4f}")
@@ -97,7 +97,7 @@ def run_shap_explanation(X_scaled: np.ndarray, labels: np.ndarray,
     colors = [PALETTE[i % len(PALETTE)] for i in range(len(feats))]
     ax.barh(feats, vals, color=colors, edgecolor="white")
     ax.set_xlabel("Mean |SHAP value| (contribution to cluster membership)")
-    ax.set_title("SHAP Feature Importance for Cluster Assignment\n"
+    ax.set_title("Supplementary Diagnostic: SHAP Feature Importance\n"
                  "(higher = stronger driver of cluster membership)")
     ax.axvline(0, color="black", lw=0.5)
     plt.tight_layout()
@@ -108,7 +108,7 @@ def run_shap_explanation(X_scaled: np.ndarray, labels: np.ndarray,
         path = os.path.join(XAI_OUT, "shap_cluster_summary.png")
         fig.savefig(path, dpi=150, bbox_inches="tight")
         plt.close(fig)
-        print(f"[xai-L1] SHAP plot saved -> {path}")
+        print(f"[xai-L1] Supplementary SHAP plot saved -> {path}")
         with open(os.path.join(XAI_OUT, "shap_importance.json"), "w") as f:
             json.dump(result, f, indent=2)
 
@@ -122,16 +122,21 @@ def run_shap_explanation(X_scaled: np.ndarray, labels: np.ndarray,
 def build_cluster_delta_report(site_archetypes: dict, cluster_profiles: dict,
                                 feature_names: list, save: bool = True) -> dict:
     """
-    Generate a natural-language sentence per feature per site explaining
+    Generate a feature alignment table per site explaining
     how the site compares to its cluster mean.
     """
     report = {}
     lines  = ["CLUSTER DELTA REPORT — Lunar Habitat Site Selector", "=" * 60, ""]
 
     for site_name, rpt in site_archetypes.items():
-        site_lines = [f"Site: {site_name}",
-                      f"Archetype: {rpt['archetype_label']}  (Cluster {rpt['cluster_id']})", ""]
-        sentences  = []
+        site_lines = [f"Candidate Site: {site_name}",
+                      f"Cluster: {rpt['cluster_id']}",
+                      f"Archetype: {rpt['archetype_label']}",
+                      "",
+                      "Feature alignment table:",
+                      f"{'Feature':<20} | {'Site':>10} | {'Cluster Mean':>12} | {'Z':>6} | {'Alignment'}"]
+
+        table_data = []
 
         sv = rpt.get("site_feature_values", {})
         cm = rpt.get("cluster_mean", {})
@@ -151,25 +156,43 @@ def build_cluster_delta_report(site_archetypes: dict, cluster_profiles: dict,
                         "moderately" if abs(z) < 1.0 else \
                         "notably" if abs(z) < 2.0 else "significantly (outlier)"
 
-            unit_map = {"elevation_m": "m", "slope_deg": "deg", "sunlight_score": "%"}
+            alignment = f"{magnitude} {direction} cluster average"
+            unit_map = {"elevation_m": "m", "slope_deg": "deg", "sunlight_score": "%", "dust_risk_score": ""}
             unit = unit_map.get(feat, "")
 
-            sentence = (
-                f"{feat.replace('_', ' ').title()}: "
-                f"{site_val:.1f}{unit} vs cluster mean {clus_mean:.1f}{unit} "
-                f"(z={z:+.2f}) — {magnitude} {direction} cluster average."
-            )
+            site_str = f"{site_val:.1f}{unit}"
+            cm_str = f"{clus_mean:.1f}{unit}"
+            z_str = f"{z:+.2f}"
+
             if is_out:
-                sentence += " [OUTLIER > 2 standard deviations]"
-            sentences.append(sentence)
-            site_lines.append(f"  {sentence}")
+                alignment += " [OUTLIER]"
+
+            site_lines.append(f"{feat:<20} | {site_str:>10} | {cm_str:>12} | {z_str:>6} | {alignment}")
+            table_data.append({
+                "feature": feat, "site_val": site_str, "cluster_mean": cm_str, 
+                "z": z, "alignment": alignment
+            })
+
+        if table_data:
+            table_data.sort(key=lambda x: abs(x["z"]))
+            strongest = table_data[0]
+            weakest = table_data[-1]
+
+            site_lines.append("")
+            site_lines.append(f"Strongest alignment:\n  {strongest['feature']} (z={strongest['z']:+.2f})")
+            site_lines.append(f"Weakest alignment:\n  {weakest['feature']} (z={weakest['z']:+.2f})")
+            
+            interpretation = "environmentally characteristic of this cluster"
+            if abs(weakest["z"]) >= 1.0:
+                interpretation += f", with identified limitation in {weakest['feature']}"
+            site_lines.append(f"Environmental interpretation:\n  {interpretation}")
 
         site_lines.append("")
         lines.extend(site_lines)
         report[site_name] = {
             "archetype":   rpt["archetype_label"],
             "cluster_id":  rpt["cluster_id"],
-            "narratives":  sentences,
+            "table_data":  table_data,
         }
 
     full_text = "\n".join(lines)
@@ -235,7 +258,7 @@ def plot_decision_boundary(X_scaled: np.ndarray, labels: np.ndarray,
     grid_sc  = scaler.transform(grid_raw)
     zz       = km.predict(grid_sc).reshape(xx.shape)
 
-    colors = ["#AED6F1", "#FADBD8", "#A9DFBF"][:k]
+    colors = ["#AED6F1", "#FADBD8", "#A9DFBF", "#D7BDE2", "#F9E79F"][:k]
     from matplotlib.colors import ListedColormap
     cmap = ListedColormap(colors)
 
@@ -327,7 +350,7 @@ def build_counterfactuals(df: pd.DataFrame, X_scaled: np.ndarray, labels: np.nda
     perturbations = [0.05, 0.10, 0.20, 0.50, 1.00]
 
     results  = {}
-    txt_lines = ["COUNTERFACTUAL EXPLANATIONS", "=" * 60, ""]
+    txt_lines = ["ML CLUSTER SENSITIVITY / ENVIRONMENTAL PERTURBATION", "=" * 60, ""]
 
     for site_name, rpt in site_archetypes.items():
         row = rpt.get("grid_row")

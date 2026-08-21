@@ -1,182 +1,202 @@
 [
   {
     "row": 73,
-    "col": 317,
-    "cluster_id": 0,
-    "anomaly_score": -0.08470282877568891,
-    "elevation_m": 5142.99853515625,
-    "slope_deg": 27.941734313964844,
-    "sunlight_score": 5.988921642303467
-  },
-  {
-    "row": 73,
     "col": 316,
-    "cluster_id": 0,
-    "anomaly_score": -0.08463332970931658,
+    "cluster_id": 3,
+    "anomaly_score": -0.1325567539878557,
     "elevation_m": 5119.1669921875,
     "slope_deg": 28.524456024169922,
-    "sunlight_score": 7.869292736053467
+    "sunlight_score": 7.869292736053467,
+    "dust_risk_score": 66.22926330566406
   },
   {
     "row": 71,
     "col": 314,
-    "cluster_id": 0,
-    "anomaly_score": -0.0816259476239195,
+    "cluster_id": 3,
+    "anomaly_score": -0.13129948571392214,
     "elevation_m": 5076.23388671875,
     "slope_deg": 28.294275283813477,
-    "sunlight_score": 6.1146626472473145
+    "sunlight_score": 6.1146626472473145,
+    "dust_risk_score": 63.39380645751953
   },
   {
     "row": 73,
     "col": 315,
-    "cluster_id": 0,
-    "anomaly_score": -0.07961792299029935,
+    "cluster_id": 3,
+    "anomaly_score": -0.13094510506932844,
     "elevation_m": 5301.7724609375,
     "slope_deg": 28.2875919342041,
-    "sunlight_score": 18.12725067138672
+    "sunlight_score": 18.12725067138672,
+    "dust_risk_score": 72.42745208740234
+  },
+  {
+    "row": 73,
+    "col": 317,
+    "cluster_id": 3,
+    "anomaly_score": -0.12979356824300348,
+    "elevation_m": 5142.99853515625,
+    "slope_deg": 27.941734313964844,
+    "sunlight_score": 5.988921642303467,
+    "dust_risk_score": 62.53057098388672
   },
   {
     "row": 72,
     "col": 314,
-    "cluster_id": 0,
-    "anomaly_score": -0.07871260788972756,
+    "cluster_id": 3,
+    "anomaly_score": -0.126708832642351,
     "elevation_m": 5292.728515625,
     "slope_deg": 27.98855209350586,
-    "sunlight_score": 17.439123153686523
-  },
-  {
-    "row": 70,
-    "col": 314,
-    "cluster_id": 0,
-    "anomaly_score": -0.07846080185070103,
-    "elevation_m": 5064.64501953125,
-    "slope_deg": 27.195173263549805,
-    "sunlight_score": 2.9519424438476562
-  },
-  {
-    "row": 86,
-    "col": 289,
-    "cluster_id": 0,
-    "anomaly_score": -0.07795047185157722,
-    "elevation_m": 5969.8046875,
-    "slope_deg": 23.831878662109375,
-    "sunlight_score": 43.578617095947266
+    "sunlight_score": 17.439123153686523,
+    "dust_risk_score": 69.6850814819336
   },
   {
     "row": 73,
     "col": 318,
-    "cluster_id": 0,
-    "anomaly_score": -0.07642724708060955,
+    "cluster_id": 3,
+    "anomaly_score": -0.12647392561325532,
     "elevation_m": 5350.39208984375,
     "slope_deg": 27.13583755493164,
-    "sunlight_score": 11.386931419372559
+    "sunlight_score": 11.386931419372559,
+    "dust_risk_score": 68.90323638916016
+  },
+  {
+    "row": 59,
+    "col": 294,
+    "cluster_id": 3,
+    "anomaly_score": -0.1242798888119897,
+    "elevation_m": 5325.90625,
+    "slope_deg": 17.074186325073242,
+    "sunlight_score": 0.08096639811992645,
+    "dust_risk_score": 80.67208862304688
   },
   {
     "row": 70,
+    "col": 314,
+    "cluster_id": 3,
+    "anomaly_score": -0.12079996187875541,
+    "elevation_m": 5064.64501953125,
+    "slope_deg": 27.195173263549805,
+    "sunlight_score": 2.9519424438476562,
+    "dust_risk_score": 58.05828094482422
+  },
+  {
+    "row": 74,
+    "col": 316,
+    "cluster_id": 0,
+    "anomaly_score": -0.1185228309758154,
+    "elevation_m": 5707.923828125,
+    "slope_deg": 27.02196502685547,
+    "sunlight_score": 32.57035446166992,
+    "dust_risk_score": 68.9618148803711
+  },
+  {
+    "row": 59,
+    "col": 293,
+    "cluster_id": 3,
+    "anomaly_score": -0.11801326834430115,
+    "elevation_m": 5276.83837890625,
+    "slope_deg": 18.05727767944336,
+    "sunlight_score": 1.3603391647338867,
+    "dust_risk_score": 76.96467590332031
+  },
+  {
+    "row": 74,
+    "col": 317,
+    "cluster_id": 3,
+    "anomaly_score": -0.11753582373306615,
+    "elevation_m": 5716.2685546875,
+    "slope_deg": 26.146692276000977,
+    "sunlight_score": 30.926137924194336,
+    "dust_risk_score": 71.78953552246094
+  },
+  {
+    "row": 61,
+    "col": 295,
+    "cluster_id": 3,
+    "anomaly_score": -0.11633914097455567,
+    "elevation_m": 5230.81103515625,
+    "slope_deg": 16.960676193237305,
+    "sunlight_score": 4.003545761108398,
+    "dust_risk_score": 78.29460144042969
+  },
+  {
+    "row": 69,
+    "col": 314,
+    "cluster_id": 3,
+    "anomaly_score": -0.11507424835659574,
+    "elevation_m": 5209.5224609375,
+    "slope_deg": 24.44576072692871,
+    "sunlight_score": 4.260787010192871,
+    "dust_risk_score": 65.17801666259766
+  },
+  {
+    "row": 72,
     "col": 319,
-    "cluster_id": 0,
-    "anomaly_score": -0.07556238952845273,
-    "elevation_m": 5354.27880859375,
-    "slope_deg": 26.242507934570312,
-    "sunlight_score": 0.40252798795700073
+    "cluster_id": 3,
+    "anomaly_score": -0.11346990027886195,
+    "elevation_m": 5458.587890625,
+    "slope_deg": 25.07857322692871,
+    "sunlight_score": 7.09208345413208,
+    "dust_risk_score": 62.57035827636719
   },
   {
-    "row": 71,
+    "row": 62,
+    "col": 294,
+    "cluster_id": 3,
+    "anomaly_score": -0.11344658358833393,
+    "elevation_m": 5207.74609375,
+    "slope_deg": 20.748027801513672,
+    "sunlight_score": 12.128293991088867,
+    "dust_risk_score": 76.55586242675781
+  },
+  {
+    "row": 68,
     "col": 319,
-    "cluster_id": 0,
-    "anomaly_score": -0.07508757739770666,
-    "elevation_m": 5320.12841796875,
-    "slope_deg": 26.550703048706055,
-    "sunlight_score": 1.2811007499694824
-  },
-  {
-    "row": 84,
-    "col": 291,
-    "cluster_id": 0,
-    "anomaly_score": -0.07307393890145075,
-    "elevation_m": 6000.44384765625,
-    "slope_deg": 25.21800994873047,
-    "sunlight_score": 40.842193603515625
-  },
-  {
-    "row": 80,
-    "col": 267,
-    "cluster_id": 0,
-    "anomaly_score": -0.07299048834233968,
-    "elevation_m": 6154.24609375,
-    "slope_deg": 0.5353454351425171,
-    "sunlight_score": 51.124019622802734
-  },
-  {
-    "row": 93,
-    "col": 284,
-    "cluster_id": 0,
-    "anomaly_score": -0.07283123761165478,
-    "elevation_m": 5476.93017578125,
-    "slope_deg": 25.509876251220703,
-    "sunlight_score": 44.212135314941406
-  },
-  {
-    "row": 85,
-    "col": 291,
-    "cluster_id": 0,
-    "anomaly_score": -0.072016031413905,
-    "elevation_m": 5637.11865234375,
-    "slope_deg": 27.333873748779297,
-    "sunlight_score": 39.11960983276367
+    "cluster_id": 3,
+    "anomaly_score": -0.11091472441266814,
+    "elevation_m": 5737.70947265625,
+    "slope_deg": 16.18364715576172,
+    "sunlight_score": 8.807116508483887,
+    "dust_risk_score": 84.83847045898438
   },
   {
     "row": 69,
     "col": 319,
-    "cluster_id": 0,
-    "anomaly_score": -0.0719740661965158,
+    "cluster_id": 3,
+    "anomaly_score": -0.11034008464539047,
     "elevation_m": 5523.869140625,
     "slope_deg": 24.17403221130371,
-    "sunlight_score": 0.8438591957092285
+    "sunlight_score": 0.8438591957092285,
+    "dust_risk_score": 56.75017166137695
   },
   {
-    "row": 68,
-    "col": 317,
-    "cluster_id": 0,
-    "anomaly_score": -0.07124066774999116,
-    "elevation_m": 5157.96337890625,
-    "slope_deg": 25.33323860168457,
-    "sunlight_score": 0.0
+    "row": 71,
+    "col": 320,
+    "cluster_id": 3,
+    "anomaly_score": -0.10918493898435166,
+    "elevation_m": 5774.94921875,
+    "slope_deg": 18.094005584716797,
+    "sunlight_score": 15.660358428955078,
+    "dust_risk_score": 83.55116271972656
   },
   {
-    "row": 83,
-    "col": 293,
-    "cluster_id": 0,
-    "anomaly_score": -0.07060809298079418,
-    "elevation_m": 5841.26806640625,
-    "slope_deg": 27.092525482177734,
-    "sunlight_score": 36.928977966308594
+    "row": 206,
+    "col": 198,
+    "cluster_id": 3,
+    "anomaly_score": -0.10741097951912604,
+    "elevation_m": 1082.393798828125,
+    "slope_deg": 29.60312843322754,
+    "sunlight_score": 22.91891860961914,
+    "dust_risk_score": 85.40524291992188
   },
   {
-    "row": 83,
-    "col": 292,
-    "cluster_id": 0,
-    "anomaly_score": -0.0704267917986664,
-    "elevation_m": 6100.0654296875,
-    "slope_deg": 24.894227981567383,
-    "sunlight_score": 39.70374298095703
-  },
-  {
-    "row": 78,
-    "col": 307,
-    "cluster_id": 0,
-    "anomaly_score": -0.0699134486922044,
-    "elevation_m": 5592.0009765625,
-    "slope_deg": 27.68593406677246,
-    "sunlight_score": 30.126405715942383
-  },
-  {
-    "row": 72,
-    "col": 318,
-    "cluster_id": 0,
-    "anomaly_score": -0.06969330056302614,
-    "elevation_m": 4980.75244140625,
-    "slope_deg": 25.728906631469727,
-    "sunlight_score": 0.16200320422649384
+    "row": 73,
+    "col": 319,
+    "cluster_id": 3,
+    "anomaly_score": -0.1073696394281225,
+    "elevation_m": 5704.60205078125,
+    "slope_deg": 21.202816009521484,
+    "sunlight_score": 22.78814697265625,
+    "dust_risk_score": 77.85636138916016
   }
 ]

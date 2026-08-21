@@ -1,18 +1,5 @@
 {
   "ModelA_full": {
-    "2": {
-      "k": 2,
-      "silhouette": 0.313551,
-      "davies_bouldin": 1.309557,
-      "calinski_harabasz": 72208.88,
-      "cluster_sizes": {
-        "0": 94053,
-        "1": 65947
-      },
-      "min_cluster_size": 65947,
-      "max_cluster_size": 94053,
-      "n_cells": 160000
-    },
     "3": {
       "k": 3,
       "silhouette": 0.307771,
@@ -41,22 +28,25 @@
       "min_cluster_size": 31842,
       "max_cluster_size": 56277,
       "n_cells": 160000
+    },
+    "5": {
+      "k": 5,
+      "silhouette": 0.268481,
+      "davies_bouldin": 1.16479,
+      "calinski_harabasz": 70722.73,
+      "cluster_sizes": {
+        "0": 27960,
+        "1": 49036,
+        "2": 17972,
+        "3": 34933,
+        "4": 30099
+      },
+      "min_cluster_size": 17972,
+      "max_cluster_size": 49036,
+      "n_cells": 160000
     }
   },
   "ModelB_terrain_only": {
-    "2": {
-      "k": 2,
-      "silhouette": 0.384296,
-      "davies_bouldin": 0.980538,
-      "calinski_harabasz": 124381.36,
-      "cluster_sizes": {
-        "0": 87784,
-        "1": 72216
-      },
-      "min_cluster_size": 72216,
-      "max_cluster_size": 87784,
-      "n_cells": 160000
-    },
     "3": {
       "k": 3,
       "silhouette": 0.33247,
@@ -85,22 +75,25 @@
       "min_cluster_size": 15705,
       "max_cluster_size": 73126,
       "n_cells": 160000
+    },
+    "5": {
+      "k": 5,
+      "silhouette": 0.32437,
+      "davies_bouldin": 0.933836,
+      "calinski_harabasz": 108965.09,
+      "cluster_sizes": {
+        "0": 59807,
+        "1": 18204,
+        "2": 23634,
+        "3": 13984,
+        "4": 44371
+      },
+      "min_cluster_size": 13984,
+      "max_cluster_size": 59807,
+      "n_cells": 160000
     }
   },
   "ModelC_no_ice": {
-    "2": {
-      "k": 2,
-      "silhouette": 0.290262,
-      "davies_bouldin": 1.312938,
-      "calinski_harabasz": 78667.54,
-      "cluster_sizes": {
-        "0": 72309,
-        "1": 87691
-      },
-      "min_cluster_size": 72309,
-      "max_cluster_size": 87691,
-      "n_cells": 160000
-    },
     "3": {
       "k": 3,
       "silhouette": 0.283493,
@@ -128,6 +121,22 @@
       },
       "min_cluster_size": 25139,
       "max_cluster_size": 57025,
+      "n_cells": 160000
+    },
+    "5": {
+      "k": 5,
+      "silhouette": 0.273084,
+      "davies_bouldin": 1.090763,
+      "calinski_harabasz": 66769.51,
+      "cluster_sizes": {
+        "0": 19182,
+        "1": 35535,
+        "2": 25877,
+        "3": 51785,
+        "4": 27621
+      },
+      "min_cluster_size": 19182,
+      "max_cluster_size": 51785,
       "n_cells": 160000
     }
   }
