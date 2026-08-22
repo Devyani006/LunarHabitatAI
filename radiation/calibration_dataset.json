@@ -1,7 +1,7 @@
 {
   "_schema_version": "2.0",
   "_description": "Radiation calibration dataset for Lunar Habitat AI Radiation Model V1",
-  "_provenance_note": "Dose values and incident GCR flux reductions are directly reported by Burahmah & Heilbronn (2023) PHITS simulations. Dose conversions from uSv/day to mSv/year are calculated. No SVF value is claimed to be measured by the source paper. The model uses a terrain-shielding proxy derived from the regional SVF: shielding_proxy = 1 - SVF.",
+  "_provenance_note": "Dose values and incident GCR flux reductions are directly reported by Burahmah & Heilbronn (2023) PHITS simulations. Dose conversions from uSv/day to mSv/year are calculated. No SVF value is reported or measured by the source paper. The model constructs a DERIVED SVF PROXY for each calibration geometry: svf_proxy = 1 - terrain_shielding_proxy, where terrain_shielding_proxy = incident_gcr_flux_reduction_fraction. This proxy is then used to calibrate the dose-vs-SVF relationship applied to the DEM-derived SVF field.",
   "calibration_points": [
     {
       "study_id": "BH2023_solmin_open_surface",
@@ -70,6 +70,7 @@
       "solar_condition": "solar minimum",
       "incident_gcr_flux_reduction_fraction": 0.258,
       "published_dose_reduction_fraction": 0.449,
+      "terrain_shielding_proxy": 0.258,
       "notes": "Incident GCR flux reduction and dose reduction are directly reported in Table 3. Dose conversion is calculated."
     }
   ],
@@ -101,9 +102,10 @@
     "radiation_type_modelled": "Galactic Cosmic Rays",
     "physical_quantity": "Effective dose equivalent",
     "solar_condition": "Solar minimum",
-    "calibration_feature": "terrain_shielding_proxy",
-    "grid_feature_formula": "terrain_shielding_proxy = 1 - SVF",
-    "important_limitation": "The published paper does not report SVF. Its incident GCR flux reduction values are used as calibration evidence for the terrain-shielding proxy. The mapping from regional SVF to incident GCR shielding is therefore a first-order approximation.",
+    "calibration_predictor": "derived_svf_proxy",
+    "svf_proxy_formula": "svf_proxy = 1 - terrain_shielding_proxy",
+    "terrain_shielding_proxy_source": "terrain_shielding_proxy = incident_gcr_flux_reduction_fraction from Burahmah & Heilbronn (2023) Table 3",
+    "important_limitation": "The published paper does not report SVF. Its incident GCR flux reduction values are used to construct a derived SVF proxy (svf_proxy = 1 - terrain_shielding_proxy) that serves as the calibration predictor. The connection between this proxy and the DEM-derived SVF field is a first-order physics-informed approximation and constitutes the primary scientific assumption of V1. No SVF values are measured or fabricated.",
     "n_calibration_points": 5,
     "n_studies_with_compatible_dose": 1,
     "independent_validation": "Not available because all five calibration points come from the same PHITS study."
